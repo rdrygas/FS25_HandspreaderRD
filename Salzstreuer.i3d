@@ -146,7 +146,7 @@
       </TransformGroup>
       <TransformGroup name="filling" nodeId="78">
         <TransformGroup name="fillUnit" nodeId="79">
-          <Shape name="exactFillRootNode" translation="0 0.886321 0.720463" shapeId="10" visibility="false" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="80" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+          <Shape name="exactFillRootNode" translation="0 -0.2 -0.15" shapeId="10" visibility="false" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="80" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
           <Shape name="fillVolume" shapeId="11" clipDistance="100" nodeId="81" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
           <TransformGroup name="unloadinfo" translation="0.404417 0 0" nodeId="82"/>
           <TransformGroup name="fillAutoAimTarget1" translation="0 0.821278 0.736192" nodeId="83"/>
