@@ -40,11 +40,7 @@
         <supportsPickUp>true</supportsPickUp>
     </base>
 
-
-
     <wheels>
-
-
         <wheelConfigurations>
             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="LIZARD" saveId="LIZARD_DEFAULT">
                 <wheels autoRotateBackSpeed="2.2" isCareWheelConfiguration="true">
@@ -68,22 +64,6 @@
 			<ackermannSteering rotSpeed="70" rotMax="60" rotCenter="0 0"/>
 		</ackermannSteeringConfigurations>
 	</wheels>
-
-
-    <!--<baseMaterial>
-        <material name="Saltspreader_mat" baseNode="Frame">
-            <shaderParameter name="colorMat0" value="AGCO_GREY1"/>
-            <shaderParameter name="colorMat1" value="AGCO_GREY1"/>
-        </material>
-    </baseMaterial>
-
-    <baseMaterialConfigurations price="50" useDefaultColors="true" defaultColorIndex="6">
-        <material name="Saltspreader_mat" shaderParameter="colorMat0"/>
-    </baseMaterialConfigurations>
-
-    <designMaterialConfigurations price="25" useDefaultColors="true" defaultColorIndex="6">	
-        <material name="Saltspreader_mat" shaderParameter="colorMat1" />		
-    </designMaterialConfigurations>	-->
 
     <baseColorConfigurations useDefaultColors="true" price="100">
         <baseColorConfiguration materialTemplateName="SUER_GREY1"/>
@@ -119,13 +99,9 @@
                         <motionPathEffect textureFilename="$data/vehicles/amazone/zgts10001/fertilizerEffectRightArray.dds" numRows="22" rowLength="32" minFade="0.03" isLeft="false"/> 
                     </effectNode>
                 </effects>
-
-                
-				
+		
 				<turnedAnimation name="comporta" turnOnSpeedScale="1" turnOffSpeedScale="-1" />
             </sprayType>
-
-
 
             <sprayType fillTypes="lime">
                  <usageScales workAreaIndex="2" scale="1" />
@@ -140,28 +116,9 @@
                     <effectNode effectNode="smokeEmitter" delay="0.5" effectClass="ParticleEffect" particleType="smoke" materialType="smokeParticle" emitCountScale="0.3" worldSpace="true"/>  <!--emitCountScale normalerweise 5-->
                 </effects>
 
-                <!--<ai>
-                    <areaMarkers leftNode="workAreaStart" rightNode="workAreaWidth" backNode="workAreaHeight" />
-                    <sizeMarkers leftNode="workAreaStart" rightNode="workAreaWidth" backNode="workAreaHeight" />
-                    <collisionTrigger node="aiCollisionTrigger" width="3.0" height="3.1"/>
-                </ai>-->
 				<turnedAnimation name="comporta" turnOnSpeedScale="1" turnOffSpeedScale="-1" />
             </sprayType>
 
-            <!--<sprayType fillTypes="salt">
-                 <usageScales workAreaIndex="3" scale="0.2" />
-
-                <effects>
-                    <effectNode effectClass="FertilizerMotionPathEffect" effectType="FERTILIZER" linkNode="saltSprayEffect">
-                        <motionPathEffect textureFilename="$data/vehicles/bredal/sg/fertilizerEffectLeftArray.dds" numRows="10" rowLength="24" minFade="0.03" isLeft="true" />
-                    </effectNode>
-                    <effectNode effectClass="FertilizerMotionPathEffect" effectType="FERTILIZER" linkNode="saltSprayEffect2">
-                        <motionPathEffect textureFilename="$data/vehicles/bredal/sg/fertilizerEffectRightArray.dds" numRows="10" rowLength="24" minFade="0.03" isLeft="false" />
-                    </effectNode>
-                </effects>
-
-				<turnedAnimation name="comporta" turnOnSpeedScale="1" turnOffSpeedScale="-1" />
-            </sprayType>-->
         </sprayTypes>
     </sprayer>
 
@@ -179,9 +136,6 @@
         </effects>
     </saltSpreader>
 
-
-
-
     <workAreas>
         <workArea type="sprayer" functionName="processSprayerArea" disableBackwards="false" requiresGroundContact="false" requiresOwnedFarmland="false" sprayType="1">
             <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight" />
@@ -194,8 +148,6 @@
         </workArea>
     </workAreas>
     
-	
-
     <animations>
         <animation name="enterAnimation" >
             <part node="components" startTime="0.1" endTime="0.5" startRot="-19.167 0 0" endRot="0 0 0"/>
@@ -204,7 +156,6 @@
             <part node="fillVolume" startTime="0.1" endTime="0.5" startTrans="0 -0.226 0.132" endTrans="0 0 0"/>
         </animation>
     </animations>
-
 
     <enterable isTabbable="true">
 		<enterReferenceNode node="2"/>
@@ -220,7 +171,6 @@
 		<characterNode node="playerNode" cameraMinDistance="1.75" spineRotation="270 0 90" useAnimation="true" />
 		<enterAnimation name="enterAnimation"/>
 	</enterable>
-
 
     <pushHandTool>
         <raycast node1="raycast01" node2="raycast02" playerNode="playerNode"/>
@@ -302,7 +252,6 @@
         <motorStartDuration>1500</motorStartDuration>
     </motorized>
 
-
     <drivable>
 		<idleTurning allowed="true" direction="1" maxSpeed="10" steeringFactor="100"/>
 		<sounds>
@@ -310,21 +259,11 @@
 		</sounds>
 	</drivable>
 
-
-    
-
-
-
     <turnOnVehicle turnOffIfNotAllowed="true">
         <sounds>
             <work template="defaultSpreader" linkNode="Spreader" volumeScale="0.50"/>
         </sounds>
-        <!--<animationNodes>
-            <animationNode node="Spreader"   rotSpeed="-1000" rotAxis="2"  turnOnFadeTime="1" turnOffFadeTime="10" />
-        </animationNodes>-->
     </turnOnVehicle>
-
-
 
     <fillUnit>
         <fillUnitConfigurations>
@@ -334,7 +273,6 @@
                     <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="fertilizer lime" capacity="40">
                         <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.2" />
                     </fillUnit>
-                    <!--<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="500 " canBeUnloaded="false" />-->
                 </fillUnits>
             </fillUnitConfiguration>
             
@@ -368,20 +306,17 @@
 
         <unloadInfos>
             <unloadInfo>
-                <node node="unloadinfo" width="2" length="4.0" /><!--<node node="unloadinfo" width="2" length="4.0" />-->
+                <node node="unloadinfo" width="2" length="4.0" />
             </unloadInfo>
         </unloadInfos>
     </fillVolume>
 
     <mower fruitTypeConverter="MOWER" />
 
-    
-
     <ai>
         <agent width="2.85" length="7.1" height="3.5" lengthOffset="1.2" frontOffset="3.07"/>
         <collisionTrigger node="aiCollisionTrigger" width="3.2" height="4.0"/>
     </ai>
-
 
     <foliageBending>
         <bendingNode minX="-1" maxX="1" minZ="-1" maxZ="1" yOffset="0.6" />
@@ -389,7 +324,6 @@
 
     <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
     <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
-
 
 <i3dMappings>
     <i3dMapping id="components" node="0>0"/>
@@ -448,7 +382,3 @@
 </i3dMappings>
 
 </vehicle>
-
-
-
-   
