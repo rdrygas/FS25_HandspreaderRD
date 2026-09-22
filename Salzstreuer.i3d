@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Salzstreuer.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/scratched_diffuse.dds"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/metallic/scratched_specular.dds"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png"/>
+    <File fileId="4" filename="Saltspreader_specular.dds"/>
+    <File fileId="3" filename="normal_map.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="fillVolume" materialId="5" diffuseColor="0.8 0.8 0.8 1" specularColor="0.8 1 0.8">
+    </Material>
+    <Material name="gniot" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="Saltspreader_mat_fabric5Dark_mat" materialId="7" diffuseColor="0.8 0.8 0.8 1" specularColor="0.501961 1 0" customShaderId="5">
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="17"/>
+      <Custommap name="detailDiffuse" fileId="18"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="Saltspreader_mat_metalPaintedGray_mat" materialId="8" diffuseColor="0.8 0.8 0.8 1" specularColor="0.501961 1 0" customShaderId="5">
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.285 0.285 0.285"/>
+    </Material>
+    <Material name="Saltspreader_mat_silverCircularBrushed_mat" materialId="9" diffuseColor="0.8 0.8 0.8 1" specularColor="0.501961 1 0" customShaderId="5">
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="17"/>
+      <Custommap name="detailDiffuse" fileId="18"/>
+      <CustomParameter name="colorScale" value="0.8 0.8 0.8"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="spreader_mat" materialId="10" diffuseColor="0.8 0.8 0.8 1" customShaderId="5">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="13"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
+    </Material>
+    <Material name="spreader_mat" materialId="11" diffuseColor="0.8 0.8 0.8 1" customShaderId="5">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="12" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="wheel_mat" materialId="13" diffuseColor="0.8 0.8 0.8 1" customShaderId="5">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.258 0.285 0.285"/>
+    </Material>
+    <Material name="wheel_mat" materialId="14" diffuseColor="0.8 0.8 0.8 1" customShaderId="5">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.285 0.285 0.285"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Salzstreuer.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="SaltSpreader" translation="0 0 -0.469507" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" nodeId="27" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="12">
+      <TransformGroup name="components" nodeId="28">
+        <Shape name="Frame" shapeId="2" clipDistance="300" nodeId="29" castsShadows="true" receiveShadows="true" materialIds="11"/>
+        <Shape name="Wanne" shapeId="3" clipDistance="300" nodeId="30" castsShadows="true" receiveShadows="true" materialIds="10"/>
+        <Shape name="Spreader" translation="0 0.452 0.742" shapeId="4" clipDistance="300" nodeId="31" castsShadows="true" receiveShadows="true" materialIds="10"/>
+      </TransformGroup>
+      <TransformGroup name="Wheels" nodeId="32">
+        <TransformGroup name="transform" nodeId="33">
+          <Shape name="WheelL" translation="0.289 0.276 0.741" shapeId="5" clipDistance="300" nodeId="34" castsShadows="true" receiveShadows="true" materialIds="13,8,9,7"/>
+          <Shape name="WheelR" translation="-0.297 0.273 0.742" shapeId="6" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="14,9"/>
+          <TransformGroup name="wheel3" translation="0.285943 0.175 0.329" nodeId="36"/>
+          <TransformGroup name="wheel4" translation="-0.308385 0.174618 0.32906" nodeId="37"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="cameras" nodeId="38">
+        <TransformGroup name="outdoorCameraTarget" translation="0 1.1087 0.602114" nodeId="39">
+          <Camera name="outdoorCamera1" translation="2.3603 2.36155 -0.383314" rotation="130.034 84.3616 -180" nodeId="40" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+        </TransformGroup>
+        <Camera name="indoorCamera1" translation="-8.14618e-09 1.70825 -0.581878" rotation="0 180 0" nodeId="41" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+        <TransformGroup name="cameraRaycastNode1" translation="0 1.26106 0" nodeId="42"/>
+        <TransformGroup name="cameraRaycastNode2" translation="0 0.965389 0" nodeId="43"/>
+        <TransformGroup name="cameraRaycastNode3" translation="0 0.997017 0" nodeId="44"/>
+        <Shape name="shadowFocusBox" translation="0 0.285024 0" shapeId="7" visibility="false" clipDistance="150" nodeId="45" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      </TransformGroup>
+      <TransformGroup name="player" translation="7.05507e-15 8.07006e-08 -0.923104" rotation="180 -0 180" nodeId="46">
+        <TransformGroup name="playerNode" translation="9.27865e-19 -3.04049e-09 0.0518855" rotation="4.12171e-07 0 1.74906e-08" nodeId="47">
+          <TransformGroup name="skeleton" translation="-8.2774e-08 0.548187 -8.2774e-08" rotation="-180 0 -180" nodeId="48"/>
+        </TransformGroup>
+        <TransformGroup name="raycast01" translation="0 0.878706 -0.577396" nodeId="49"/>
+        <TransformGroup name="raycast02" translation="0 0.803913 -0.41781" nodeId="50"/>
+      </TransformGroup>
+      <TransformGroup name="Griff" nodeId="51">
+        <TransformGroup name="playerLeftHandTarget" translation="0.158268 1.25409 -0.0700279" rotation="0 -90 0" nodeId="52"/>
+        <TransformGroup name="playerRightHandTarget" translation="-0.150997 1.24561 -0.087056" rotation="0 90 0" nodeId="53"/>
+      </TransformGroup>
+      <TransformGroup name="exitPoint" translation="-0.584894 0 0" nodeId="54"/>
+      <TransformGroup name="ai" nodeId="55">
+        <TransformGroup name="aiCollisionTrigger" translation="0 0 0.687026" nodeId="56"/>
+      </TransformGroup>
+      <TransformGroup name="anim" nodeId="57"/>
+      <TransformGroup name="workAreas" nodeId="58">
+        <TransformGroup name="workAreaStart" translation="1.2 0 1" nodeId="59"/>
+        <TransformGroup name="workAreaWidth" translation="-1.2 0 1" nodeId="60"/>
+        <TransformGroup name="workAreaHeight" translation="1.2 0 2.2" nodeId="61"/>
+        <TransformGroup name="dropAreaStart" translation="0.994176 0 1.1228" nodeId="62"/>
+        <TransformGroup name="dropAreaWidth" translation="-0.630148 0 1.24072" nodeId="63"/>
+        <TransformGroup name="dropAreaHeight" translation="1.44693 0 2.55836" nodeId="64"/>
+        <TransformGroup name="ground" translation="0 0 0.64196" nodeId="65"/>
+      </TransformGroup>
+      <Shape name="playerBlockCollision" translation="0 0.0181877 0.534545" shapeId="8" visibility="false" compoundChild="true" collisionFilterGroup="0x2002" collisionFilterMask="0xfffffbff" density="0.001" nodeId="66" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      <TransformGroup name="effects" nodeId="67">
+        <Shape name="smokeEmitter" translation="0 0 1.35062" shapeId="9" clipDistance="300" nodeId="68" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <TransformGroup name="sprayEffect" translation="0 0.480316 0.745143" rotation="172.578 -0.799721 169.89" nodeId="69"/>
+        <TransformGroup name="sprayEffect" translation="0 0.480316 0.745143" rotation="172.81 2.01096 -168.451" nodeId="70"/>
+        <TransformGroup name="saltSprayEffect" translation="0 0.480316 0.745143" rotation="170.656 -1.45696 179.121" nodeId="71"/>
+        <TransformGroup name="saltSprayEffect" translation="0 0.480316 0.745143" rotation="170.656 -1.45696 179.121" nodeId="72"/>
+        <TransformGroup name="fertilizerSprayEffect" translation="0 0.480316 0.745143" rotation="162.458 -6.0542 168.409" nodeId="73"/>
+        <TransformGroup name="fertilizerSprayEffect" translation="0 0.480316 0.745143" rotation="161.587 2.08108 -166.915" nodeId="74"/>
+      </TransformGroup>
+      <TransformGroup name="filling" nodeId="78">
+        <TransformGroup name="fillUnit" nodeId="79">
+          <Shape name="exactFillRootNode" translation="0 0.886321 0.720463" shapeId="10" visibility="false" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="80" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+          <Shape name="fillVolume" shapeId="11" clipDistance="100" nodeId="81" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          <TransformGroup name="unloadinfo" translation="0.404417 0 0" nodeId="82"/>
+          <TransformGroup name="fillAutoAimTarget1" translation="0 0.821278 0.736192" nodeId="83"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="SaltSpreader" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0x10000" clipDistance="300" nodeId="84"/>
+    </Shape>
+  </Scene>
+
+</i3D>

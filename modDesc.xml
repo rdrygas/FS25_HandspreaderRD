@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="96">
+    <author>Andi Modding</author>
+	<version>1.0.0.0</version>
+    <title>
+        <en>Hand Spreader</en>
+		<de>Handstreuer</de>
+    </title>
+	    <description>
+<en><![CDATA[
+This is a spreader. You can use it to spread fertilizer, lime and salt. At a price of 200$, it is very cheap compared to the larger machines. It is very suitable for cost-effectively de-icing or applying lime to your small yard area.
+You can find it under fertilizer spreaders.
+-Volume: 40/100L
+-Price: 200$
+-Work Area: 2,4 Meter
+]]>
+</en>
+<de><![CDATA[Dies ist ein Handstreuer. Mit ihm kannst du Dünger, Kalk und Salz ausbringen. Für einen Preis von 200€ ist er im Vergleich zu den großen Maschinen sehr günstig. Er ist sehr gut geeignet um seine kleine Hoffläche kostengünstig zu enteisen oder Kalk auszubringen.
+Man findet den Streuer unter Düngerstreuer.
+-Volumen: 40/100L
+-Preis: 200€
+-Arbeitsbreite: 2,4 Meter
+]]></de>
+
+    </description>
+
+
+    <vehicleTypes>
+		<type name="handToolSpreader" parent="handToolMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="sprayer"/>
+			<specialization name="fillVolume"/>
+            <specialization name="saltSpreader"/>
+			
+			<specialization name="dischargeable" />
+		</type>
+	</vehicleTypes>
+
+	
+
+
+    <iconFilename>icon_Spreader.dds</iconFilename>
+	
+	<multiplayer supported="true"/>
+	
+    <storeItems>
+        <storeItem xmlFilename="Spreader.xml"/>
+        <!--<storeItem xmlFilename="Saltspreader.xml"/>-->
+    </storeItems>
+
+	<l10n>
+    
+
+        <text name="fertilizerLime">
+            <en>Fertilizer and lime</en>
+			<de>Dünger und Kalk</de>
+        </text>
+        <text name="salt">
+            <en>Salt</en>
+			<de>Salz</de>
+        </text>
+    </l10n>
+	
+	
+</modDesc>
