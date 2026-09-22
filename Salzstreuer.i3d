@@ -19,7 +19,6 @@
     <File fileId="3" filename="normal_map.dds"/>
   </Files>
 
-
   <Materials>
     <Material name="fillVolume" materialId="5" diffuseColor="0.8 0.8 0.8 1" specularColor="0.8 1 0.8">
     </Material>
@@ -79,7 +78,6 @@
       <CustomParameter name="colorScale" value="0.285 0.285 0.285"/>
     </Material>
   </Materials>
-
 
   <Shapes externalShapesFile="Salzstreuer.i3d.shapes">
   </Shapes>
