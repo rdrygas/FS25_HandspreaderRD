@@ -332,7 +332,7 @@
                 <fillUnits>
                     <unloading width="10" offset="0 0 0" /><!--<unloading width="25" offset="0 0 0" />-->
                     <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="fertilizer lime" capacity="40">
-                        <exactFillRootNode node="exactFillRootNode" />
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.2" />
                     </fillUnit>
                     <!--<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="500 " canBeUnloaded="false" />-->
                 </fillUnits>
@@ -342,7 +342,7 @@
                 <fillUnits>
                 <unloading width="10" offset="0 0 0" /><!--neu-->
                     <fillUnit unitTextOverride="$l10n_unit_literShort"  fillTypes="roadsalt" capacity="100">
-                        <exactFillRootNode node="exactFillRootNode"/>
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.2" />
                     </fillUnit>
                 </fillUnits>
             </fillUnitConfiguration>
