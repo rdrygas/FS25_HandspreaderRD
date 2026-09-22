@@ -47,7 +47,7 @@
 
         <wheelConfigurations>
             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="LIZARD" saveId="LIZARD_DEFAULT">
-                <wheels autoRotateBackSpeed="2.2">
+                <wheels autoRotateBackSpeed="2.2" isCareWheelConfiguration="true">
 					<wheel isLeft="true" hasTireTracks="true" hasParticles="true" >
                         <physics radius="0.19" width="0.15" rotSpeed="1" restLoad="0.1" mass="0.01" repr="0>1|0|0"  useReprDirection="true" forcePointRatio="0.3" initialCompression="10" suspTravel="0.01" spring="100" damper="100" showSteeringAngle="false"/>
                     </wheel>
