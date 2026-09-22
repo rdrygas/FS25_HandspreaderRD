@@ -1,0 +1,18 @@
+# Release packages
+*.zip
+
+# Farming Simulator and editor output
+log.txt
+*.log
+*.bak
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
+*~
